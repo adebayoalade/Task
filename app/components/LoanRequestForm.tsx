@@ -24,7 +24,7 @@ const LoanRequestForm: React.FC<LoanRequestFormProps> = ({
   const [errors, setErrors] = useState<
     Partial<Record<keyof LoanRequest, string>>
   >({});
-  const validateField = (field: keyof LoanRequest, value: any) => {
+  const validateField = (field: keyof LoanRequest, value: string | number): boolean => {
     try {
       loanRequestSchema.shape[field].parse(value);
       setErrors((prev) => ({ ...prev, [field]: undefined }));

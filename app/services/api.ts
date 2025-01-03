@@ -78,15 +78,15 @@ export const fetchUserData = async (): Promise<UserInfo> => {
   });
 };
 
-export const requestLoan = async (request: { amount: number; tenure: number; purpose: string }): Promise<void> => {
+export const requestLoan = async ({amount, tenure, purpose}: {amount: number; tenure: number; purpose: string}): Promise<void> => {
   // Simulate API call
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       // Simulate random success/failure
-      if (Math.random() > 0.3) {
+      if (amount > 0 && tenure > 0 && purpose.trim().length > 0) {
         resolve();
       } else {
-        reject(new Error('Loan request failed. Please try again.'));
+        reject(new Error('Invalid loan parameters'));
       }
     }, MOCK_API_DELAY);
   });
