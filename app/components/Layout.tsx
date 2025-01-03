@@ -13,18 +13,18 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   return (
     <div className="flex min-h-screen bg-gray-100">
-      <div className="lg:hidden fixed top-4 left-4 z-20">
+      <div className="lg:hidden fixed top-2 left-4 z-20">
         <button
           onClick={() => setIsSidebarOpen(!isSidebarOpen)}
           className="p-2 rounded-md bg-white shadow-md"
         >
-          <FiMenu size={24} />
+          <FiMenu size={20} />
         </button>
       </div>
       <div className={`${isSidebarOpen ? 'block' : 'hidden'} lg:block`}>
         <Sidebar />
       </div>
-      <main className="flex-1 lg:ml-64 p-6">
+      <main className="flex-1 lg:ml-64 p-6 mt-4">
         {children}
       </main>
     </div>

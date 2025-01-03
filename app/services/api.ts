@@ -1,6 +1,6 @@
 import { UserInfo } from '../../app/types';
 
-const MOCK_API_DELAY = 1000; // Simulate network delay
+const MOCK_API_DELAY = 1000;
 
 const mockUserData: UserInfo = {
   name: 'Adebayo David',
@@ -78,13 +78,7 @@ export const fetchUserData = async (): Promise<UserInfo> => {
   });
 };
 
-interface LoanRequest {
-  amount: number;
-  tenure: number;
-  purpose: string;
-}
-
-export const requestLoan = async (loanRequest: LoanRequest): Promise<void> => {
+export const requestLoan = async (request: { amount: number; tenure: number; purpose: string }): Promise<void> => {
   // Simulate API call
   return new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -96,4 +90,4 @@ export const requestLoan = async (loanRequest: LoanRequest): Promise<void> => {
       }
     }, MOCK_API_DELAY);
   });
-}; 
+};

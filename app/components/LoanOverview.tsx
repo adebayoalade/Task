@@ -1,8 +1,13 @@
 'use client';
+
 import React, { useState } from 'react';
-import { Loan } from '../../app/types';
-import LoanRequestForm from '../components/LoanRequestForm';
-import { requestLoan } from '../../app/services/api';
+import { Loan } from '../types';
+import dynamic from 'next/dynamic';
+import { requestLoan } from '../services/api';
+
+const LoanRequestForm = dynamic(() => import('./LoanRequestForm'), {
+  ssr: false
+});
 
 interface LoanOverviewProps {
   activeLoan: Loan | null;
@@ -74,13 +79,13 @@ const LoanOverview: React.FC<LoanOverviewProps> = ({ activeLoan, loans }) => {
                 <div>
                   <p className="text-sm text-gray-600">Remaining Amount</p>
                   <p className="text-lg font-semibold text-blue-600">
-                    N{activeLoan.remainingAmount.toLocaleString('en-US', { minimumFractionDigits: 2 })}
+                    ${activeLoan.remainingAmount.toLocaleString('en-US', { minimumFractionDigits: 2 })}
                   </p>
                 </div>
                 <div>
                   <p className="text-sm text-gray-600">Monthly Payment</p>
                   <p className="text-lg font-semibold text-blue-600">
-                    N{activeLoan.monthlyPayment.toLocaleString('en-US', { minimumFractionDigits: 2 })}
+                    ${activeLoan.monthlyPayment.toLocaleString('en-US', { minimumFractionDigits: 2 })}
                   </p>
                 </div>
                 <div>
@@ -116,7 +121,7 @@ const LoanOverview: React.FC<LoanOverviewProps> = ({ activeLoan, loans }) => {
                   </div>
                   <div className="text-right">
                     <p className="font-semibold text-gray-800">
-                      N{loan.amount.toLocaleString('en-US', { minimumFractionDigits: 2 })}
+                      ${loan.amount.toLocaleString('en-US', { minimumFractionDigits: 2 })}
                     </p>
                     <span className={`text-sm px-2 py-1 rounded ${
                       loan.status === 'completed' ? 'bg-green-100 text-green-800' :
