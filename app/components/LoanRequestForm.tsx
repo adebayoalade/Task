@@ -20,7 +20,7 @@ const LoanRequestForm: React.FC<LoanRequestFormProps> = ({ onSubmit, isSubmittin
   const [formData, setFormData] = useState<Partial<LoanRequest>>({});
   const [errors, setErrors] = useState<Partial<Record<keyof LoanRequest, string>>>({});
 
-  const validateField = (field: keyof LoanRequest, value: any) => {
+  const validateField = (field: keyof LoanRequest, value: number | string) => {
     try {
       loanRequestSchema.shape[field].parse(value);
       setErrors(prev => ({ ...prev, [field]: undefined }));
@@ -130,4 +130,4 @@ const LoanRequestForm: React.FC<LoanRequestFormProps> = ({ onSubmit, isSubmittin
   );
 };
 
-export default LoanRequestForm; 
+export default LoanRequestForm;
