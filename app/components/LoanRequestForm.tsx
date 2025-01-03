@@ -1,3 +1,4 @@
+// Remove the unused type
 'use client';
 
 import React, { useState } from 'react';
