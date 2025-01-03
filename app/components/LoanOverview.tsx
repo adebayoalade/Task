@@ -1,5 +1,4 @@
 'use client';
-
 import React, { useState } from 'react';
 import { Loan } from '../../app/types';
 import LoanRequestForm from '../components/LoanRequestForm';
@@ -39,7 +38,7 @@ const LoanOverview: React.FC<LoanOverviewProps> = ({ activeLoan, loans }) => {
         {!activeLoan && (
           <button
             onClick={() => setShowForm(!showForm)}
-            className="w-full sm:w-auto px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700"
+            className="w-full sm:w-auto px-4 py-2 text-sm font-medium text-black bg-blue-600 rounded-md hover:bg-blue-700"
           >
             {showForm ? 'Cancel' : 'Request New Loan'}
           </button>
@@ -137,4 +136,4 @@ const LoanOverview: React.FC<LoanOverviewProps> = ({ activeLoan, loans }) => {
   );
 };
 
-export default LoanOverview; 
+export default LoanOverview;
