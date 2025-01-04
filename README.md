@@ -1,37 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+### 1. Initial Setup & Components
+- Set up project with TypeScript and Tailwind CSS
+- Created base components for dashboard layout
+- Implemented account balance and user profile display
 
-## Getting Started
+### 2. Transaction Management  
+- Built transaction list with sorting capabilities
+- Added filtering by transaction type
+- Implemented responsive table design
+- Created mobile-optimized transaction cards
 
-First, run the development server:
+### 3. Loan Features
+- Developed loan overview component
+- Added loan application form with Zod validation
+- Implemented mock API for loan requests
+- Created loan history display
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 4. Testing
+- Added Jest configuration
+- Wrote comprehensive tests for TransactionList
+- Improved component reusability
+- Enhanced responsive design
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Testing
+Run the test
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Future Improvements
 
-## Learn More
+- Add authentication system
+- Implement real API integration
+- Add transaction analytics
+- Support multiple account types
+- Add dark mode theme
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# Task
