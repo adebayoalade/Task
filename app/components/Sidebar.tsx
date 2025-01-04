@@ -14,7 +14,7 @@ const Sidebar: React.FC = () => {
   return (
     <div className="bg-white h-screen w-64 fixed left-0 top-0 shadow-lg">
       <div className="p-4 border-b">
-        <h1 className="text-xl font-bold text-blue-600">FinTech App</h1>
+        <h1 className="text-xl font-bold text-blue-600">Simbrella</h1>
       </div>
       <nav className="p-4">
         <ul className="space-y-2">
