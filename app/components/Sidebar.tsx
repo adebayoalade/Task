@@ -1,14 +1,18 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { MdDashboard } from "react-icons/md";
+import { FaRegMoneyBillAlt } from "react-icons/fa";
+import { AiFillProfile } from "react-icons/ai";
+import { GrTransaction } from "react-icons/gr";
 
 const Sidebar: React.FC = () => {
   const location = useLocation();
 
   const menuItems = [
-    { path: '/', label: 'Dashboard', icon: '📊' },
-    { path: '/transactions', label: 'Transactions', icon: '💳' },
-    { path: '/loans', label: 'Loans', icon: '💰' },
-    { path: '/profile', label: 'Profile', icon: '👤' },
+    { path: '/', label: 'Dashboard', icon: <MdDashboard /> },
+    { path: '/transactions', label: 'Transactions', icon: <GrTransaction /> },
+    { path: '/loans', label: 'Loans', icon: <FaRegMoneyBillAlt /> },
+    { path: '/profile', label: 'Profile', icon: <AiFillProfile /> },
   ];
 
   return (

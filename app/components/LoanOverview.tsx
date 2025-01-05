@@ -79,13 +79,13 @@ const LoanOverview: React.FC<LoanOverviewProps> = ({ activeLoan, loans }) => {
                 <div>
                   <p className="text-sm text-gray-600">Remaining Amount</p>
                   <p className="text-lg font-semibold text-blue-600">
-                    ${activeLoan.remainingAmount.toLocaleString('en-US', { minimumFractionDigits: 2 })}
+                    N{activeLoan.remainingAmount.toLocaleString('en-US', { minimumFractionDigits: 2 })}
                   </p>
                 </div>
                 <div>
                   <p className="text-sm text-gray-600">Monthly Payment</p>
                   <p className="text-lg font-semibold text-blue-600">
-                    ${activeLoan.monthlyPayment.toLocaleString('en-US', { minimumFractionDigits: 2 })}
+                    N{activeLoan.monthlyPayment.toLocaleString('en-US', { minimumFractionDigits: 2 })}
                   </p>
                 </div>
                 <div>
@@ -121,7 +121,7 @@ const LoanOverview: React.FC<LoanOverviewProps> = ({ activeLoan, loans }) => {
                   </div>
                   <div className="text-right">
                     <p className="font-semibold text-gray-800">
-                      ${loan.amount.toLocaleString('en-US', { minimumFractionDigits: 2 })}
+                      N{loan.amount.toLocaleString('en-US', { minimumFractionDigits: 2 })}
                     </p>
                     <span className={`text-sm px-2 py-1 rounded ${
                       loan.status === 'completed' ? 'bg-green-100 text-green-800' :
